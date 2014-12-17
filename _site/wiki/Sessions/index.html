@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sessions &#8211; oTree</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="oTree : A software platform for economics experiments">
+    <meta name="author" content="Chris Wickens">
+    
+    <link rel="canonical" href="/wiki/Sessions/">
+
+    <!--JS libraries-->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/js/lightbox.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/owl.carousel.css">
+    <link rel="stylesheet" href="/css/owl.theme.css">
+    <link rel="stylesheet" href="/css/pixyll.css" type="text/css">
+    <link href="/css/lightbox.css" rel="stylesheet" />
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Sessions">
+    <meta property="og:description" content="oTree : A software platform for economics experiments">
+    <meta property="og:url" content="/wiki/Sessions/">
+    <meta property="og:site_name" content="oTree">
+</head>
+
+<body class="">
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+        <a href="/" class="site-title">oTree</a>
+      <nav class="site-nav right">
+        <a href="/">Home</a>
+<a href="/samplegames/">Sample games</a>
+<a href="/wiki/Home">Wiki</a>
+<a href="/sourcecode/">Source Code</a>
+<a href="/oTree.pdf">Paper</a>
+<a href="/oTreeSlides.pdf">Slides</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        <table>
+    <tr>
+        <td valign="top">
+            <div class="post">
+                <header class="post-header">
+                    <h1 class="h2">Sessions</h1>
+                </header>
+                <article class="post-content">
+                    <p>In oTree, the term &quot;session&quot; refers to an event where a group of people spend time taking part in oTree experiments.</p>
+
+<p>An example of a session would be: </p>
+
+<blockquote>
+<p>On Tuesday at 3PM, 30 people will come to the lab for 1 hour, during which time they will play a trust game, followed by 2 ultimatum games, followed by a questionnaire. Participants get paid EUR 10.00 for showing up, plus bonus amounts for participating.</p>
+</blockquote>
+
+<p>A session can be broken down into what oTree calls &quot;subsessions&quot;. These are interchangeable units or modules that come one after another. Each subsession has a sequence of one or more pages the player must interact with. The session in the above example had 4 subsessions:</p>
+
+<ul>
+<li>Trust game</li>
+<li>Ultimatum game 1</li>
+<li>Ultimatum game 2</li>
+<li>Questionnaire</li>
+</ul>
+
+<p>Each subsession is created by an oTree app. The above session would require 3 distinct apps to be coded:</p>
+
+<ul>
+<li>Trust game</li>
+<li>Ultimatum game</li>
+<li>Questionnaire</li>
+</ul>
+
+<p>You can define your session&#39;s properties in <code>sessions.py</code>. Here are the parameters for the above example:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">SessionType(
+    name=&#39;my_session&#39;,
+    fixed_pay=1000,
+    subsession_apps=[&#39;trust&#39;, &#39;ultimatum&#39;, &#39;questionnaire&#39;],
+)        
+</code></pre></div>
+<h2>Players vs. participants</h2>
+
+<p>The terms &quot;player&quot; and &quot;participant&quot; mean similar things but are slightly different.</p>
+
+<p>A participant is a person who takes part in a session. The participant object contains properties such as the participant&#39;s name, how much they made in the session, and what their progress is in the session.</p>
+
+<p>A player is an instance of a participant in one particular subsession. A participant can be player 1 in the first subsession, player 5 in the next subsession, and so on.</p>
+
+<p>Each player has an attribute called participant that refers to the participant. In the above example, here is how this participant would be modeled in oTree:</p>
+
+<ul>
+<li>participant
+
+<ul>
+<li>label: &quot;John Smith&quot;</li>
+<li>time_started: &quot;3 PM&quot;</li>
+<li>players:
+
+<ul>
+<li>player in trust subsession
+
+<ul>
+<li>bonus: $0.50</li>
+</ul></li>
+<li>player in ultimatum subsession 1
+
+<ul>
+<li>bonus: $0.65</li>
+</ul></li>
+<li>player in ultimatum subsession 2
+
+<ul>
+<li>bonus: $0.80</li>
+</ul></li>
+<li>player in questionnaire subsession
+
+<ul>
+<li>bonus: $0.00</li>
+</ul></li>
+</ul></li>
+<li>total bonuses for participant: ($0.50 + $0.65 + $0.80 + $0.00) = $1.95</li>
+</ul></li>
+</ul>
+
+                </article>
+            </div>
+        </td>
+        <td valign="top">
+            <ul>
+<li><a class="post-link" href="/wiki/Prerequisites">Prerequisites</a></li>
+<li><a class="post-link" href="/wiki/PyCharm">PyCharm</a></li>
+<li><a class="post-link" href="/wiki/Setup">Setup</a></li>
+<li><a class="post-link" href="/wiki/Sessions">Sessions</a></li>
+<li><a class="post-link" href="/wiki/Apps">Apps</a></li>
+<li><a class="post-link" href="/wiki/Models">Models</a></li>
+<li><a class="post-link" href="/wiki/Views">Views</a></li>
+<li><a class="post-link" href="/wiki/Templates">Templates</a></li>
+<li><a class="post-link" href="/wiki/Rounds">Rounds</a></li>
+<li><a class="post-link" href="/wiki/Trying-Your-App">Trying Your App</a></li>
+<li><a class="post-link" href="/wiki/Test-Bots">Test Bots</a></li>
+<li><a class="post-link" href="/wiki/Admin">Admin</a></li>
+<li><a class="post-link" href="/wiki/Running-Lab-Sessions">Running Lab Sessions</a></li>
+<li><a class="post-link" href="/wiki/Deploying-on-Heroku">Deploying on Heroku</a></li>
+<li><a class="post-link" href="/wiki/For-Django-Devs">For Django Devs</a></li>
+<li><a class="post-link" href="/wiki/Kiosk-Mode">Kiosk Mode</a></li>
+<li><a class="post-link" href="/wiki/Payment-PDF">Payment PDF</a></li>
+<li><a class="post-link" href="/wiki/Export-Data">Export Data</a></li>
+<li><a class="post-link" href="/wiki/AMT-Integration">AMT Integration</a></li>
+<li><a class="post-link" href="/wiki/Debug-Info">Debug Info</a></li>
+<li><a class="post-link" href="/wiki/Progress-Monitor">Progress Monitor</a></li>
+<li><a class="post-link" href="/wiki/Session-Interface">Session Interface</a></li>
+<li><a class="post-link" href="/wiki/User-Input-Validation">User Input Validation</a></li>
+</ul>
+
+        </td>
+    </tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+  <div class="p2 wrap">
+    <div class="measure mt1 center">
+      <small>
+        <a href="/sourcecode">License</a>
+      </small>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-53910404-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

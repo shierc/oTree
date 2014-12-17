@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Views &#8211; oTree</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="oTree : A software platform for economics experiments">
+    <meta name="author" content="Chris Wickens">
+    
+    <link rel="canonical" href="/wiki/Views/">
+
+    <!--JS libraries-->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/js/lightbox.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/owl.carousel.css">
+    <link rel="stylesheet" href="/css/owl.theme.css">
+    <link rel="stylesheet" href="/css/pixyll.css" type="text/css">
+    <link href="/css/lightbox.css" rel="stylesheet" />
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Views">
+    <meta property="og:description" content="oTree : A software platform for economics experiments">
+    <meta property="og:url" content="/wiki/Views/">
+    <meta property="og:site_name" content="oTree">
+</head>
+
+<body class="">
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+        <a href="/" class="site-title">oTree</a>
+      <nav class="site-nav right">
+        <a href="/">Home</a>
+<a href="/samplegames/">Sample games</a>
+<a href="/wiki/Home">Wiki</a>
+<a href="/sourcecode/">Source Code</a>
+<a href="/oTree.pdf">Paper</a>
+<a href="/oTreeSlides.pdf">Slides</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        <table>
+    <tr>
+        <td valign="top">
+            <div class="post">
+                <header class="post-header">
+                    <h1 class="h2">Views</h1>
+                </header>
+                <article class="post-content">
+                    <p>Each page that your players see is defined by a <code>Page</code> class in <code>views.py</code>. (You can think of &quot;views&quot; as a synonym for &quot;pages&quot;.)</p>
+
+<p>For example, if your experiment involves showing the player a sequence of 5 pages, your <code>views.py</code> should contain 5 page classes.</p>
+
+<p>At the bottom of your <code>views.py</code>, you must have a <code>pages()</code> function that specifies the order in which players are routed through your pages. For example:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">def pages():
+    return [Start, Offer, Accept, Results]
+</code></pre></div>
+<p>This function should list all pages that anybody will see. You can filter individual pages from being seen.</p>
+
+<p>The player must submit a valid form before they get routed to the next page. If the form they submit is invalid (e.g. missing or incorrect values), it will be re-displayed to them along with the list of errors they need to correct.</p>
+
+<p>Here is what the code of a page should define (along with what attribute/method defines it):</p>
+
+<h2>Page</h2>
+
+<h3><code>player, group, subsession</code></h3>
+
+<p>These attributes are provided automatically. For example, inside a method definition, you can access the current player with <code>self.player</code>, just as you can in <code>models.py</code> or <code>forms.py</code>.</p>
+
+<h3><code>template_name</code></h3>
+
+<p>The name of the HTML template to display.</p>
+
+<p>Example:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"># This will look inside your app under the &#39;templates&#39; directory, 
+# to &#39;/app_name/MyView.html&#39;
+template_name = &#39;app_name/MyView.html&#39;
+</code></pre></div>
+<h3><code>form_models</code></h3>
+
+<p>The model that this form modifies. It will most commonly be <code>models.Player</code> or <code>models.Group</code>.</p>
+
+<h3><code>form_fields</code></h3>
+
+<p>A list of the field names from the model specified in <code>form_model</code> to include in the form.</p>
+
+<h3><code>timeout_seconds</code></h3>
+
+<p>Set to an integer that specifies how many seconds the user has to complete the page. After the time runs out, the page
+  auto-submits.</p>
+
+<p>Example: <code>timeout_seconds = 20</code></p>
+
+<h3><code>auto_submit_values</code></h3>
+
+<p>Lets you specify what values should be auto-submitted if <code>timeout_seconds</code> is exceeded, or if the experimenter
+moves the participant forward. If this is omitted, then oTree will default to <code>0</code> for numeric fields, <code>False</code> for boolean
+fields, and the empty string for text/character fields.</p>
+
+<p>This should be a dictionary where the keys are the elements of <code>form_fields</code>, and the values are the values that should
+be auto-submitted.</p>
+
+<h3><code>def variables_for_template(self)</code></h3>
+
+<p>Get any variables that will be passed to the HTML template. Add them to the dictionary as key-value pairs.</p>
+
+<p>Example:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">def variables_for_template(self):
+    return {&#39;max_amount_offered&#39;: self.subsession.max_amount_offered,
+            &#39;reject_payoff&#39;: Constants.payoff_if_rejected}
+</code></pre></div>
+<p>Note that this method will be re-executed each time the player refreshes the page reloads the page (or submits an invalid form, which triggers a page reload). Make sure this doesn&#39;t cause undesired behavior. For example, if your code generates a payoff for the player based on a random number generator, the player could exploit this by refreshing the page until they get the payoff they want. To prevent issues like this, you can check if this variable has already been set, like this:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">if self.player.payoff is None:
+    self.player.payoff = randint(0,100)
+</code></pre></div>
+<h3><code>def participate_condition(self)</code></h3>
+
+<p>Should return True if the page should be shown, and False if the page should be skipped. Default behavior is to show the page.</p>
+
+<p>For example, if you only want a page to be shown to P2 in each group:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">def participate_condition(self):
+    return self.player.id_in_group == 2
+</code></pre></div>
+<h3><code>def after_next_button(self)</code></h3>
+
+<p>After the player clicks the &quot;Next&quot; button, oTree makes sure that any form fields validate (and re-displays to the player with errors otherwise).</p>
+
+<p>Here you can put anything additional that should happen after form validation. If you don&#39;t need anything to be done, it&#39;s OK to leave this method blank, or to leave it out entirely.</p>
+
+<h2><code>def variables_for_all_templates(self)</code></h2>
+
+<p>This function is useful when you need certain variables to be passed to multiple pages in your app.
+Instead of repeating the same values in each <code>variables_for_template</code>, you can define it in this function at the top of your views.py.</p>
+
+<!---
+### time_limit_in_seconds()
+
+Your page can have a time limit, in which case the player will see a countdown timer on the page.
+This method lets you define what that time limit is.
+If the user exceeds the time limit, they can still submit the form, but once they submit,
+the `time_limit_was_exceeded` attribute will be set to `True`, which you can use to do anything you want.
+--->
+
+<h2>Wait pages</h2>
+
+<p>Wait pages are created by subclassing from <code>WaitPage</code>.</p>
+
+<p>If you have a wait page in your sequence of pages, then oTree waits until all players in the group have arrived at that point in the sequence, and then all players are allowed to proceed.</p>
+
+<p>If your subsession has multiple groups playing simultaneously, and you would like a wait page that waits for all groups (i.e. all players in the subsession), you can set the attribute <code>wait_for_all_groups = True</code> on the wait page.</p>
+
+<p>Wait pages can define the following methods:</p>
+
+<h3><code>def after_all_players_arrive(self)</code></h3>
+
+<p>This code will be executed once all players have arrived at the wait page. For example, this method can determine the winner of an auction and set each player&#39;s payoff.</p>
+
+<h3><code>def title_text(self)</code></h3>
+
+<p>The text in the title of the wait page.</p>
+
+<h3><code>def body_text(self)</code></h3>
+
+<p>The text in the body of the wait page.</p>
+
+<h2>Currency formatting</h2>
+
+<p>You can use the convert integer or float numbers to currency. For example, <code>c(5.10)</code> returns <code>&quot;$5.10&quot;</code>. oTree defaults to USD, but you can set to any currency code by specifying <code>PAYMENT_CURRENCY_CODE</code> in your project&#39;s <code>settings.py</code>. For example, you can set it to &quot;EUR&quot;, &quot;GBP&quot;, and so on.</p>
+
+<h3>Points</h3>
+
+<p>If you set <code>USE_POINTS = True</code> in <code>settings.py</code>, then in-game currency amounts will be expressed in points rather than real money.
+For example, <code>c(10)</code> is displayed as <code>10 points</code>.
+You can specify the conversion rate to real money in <code>sessions.py</code> by providing a <code>money_per_point</code> argument to the <code>SessionType</code>.
+For example, if you pay the user 2 cents per point, you would set <code>money_per_point = 0.02</code>.</p>
+
+<p>You can convert a point amount to money using the <code>to_money()</code> method,
+which takes as an argument the current subsession
+(this is necessary because subsessions in different apps can have different conversion rates).</p>
+
+<p>Let&#39;s say <code>money_per_point = 0.02</code></p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">c(10) # evaluates to Currency(10 points)
+c(10).to_money(self.subsession) # evaluates to $0.20
+</code></pre></div>
+                </article>
+            </div>
+        </td>
+        <td valign="top">
+            <ul>
+<li><a class="post-link" href="/wiki/Prerequisites">Prerequisites</a></li>
+<li><a class="post-link" href="/wiki/PyCharm">PyCharm</a></li>
+<li><a class="post-link" href="/wiki/Setup">Setup</a></li>
+<li><a class="post-link" href="/wiki/Sessions">Sessions</a></li>
+<li><a class="post-link" href="/wiki/Apps">Apps</a></li>
+<li><a class="post-link" href="/wiki/Models">Models</a></li>
+<li><a class="post-link" href="/wiki/Views">Views</a></li>
+<li><a class="post-link" href="/wiki/Templates">Templates</a></li>
+<li><a class="post-link" href="/wiki/Rounds">Rounds</a></li>
+<li><a class="post-link" href="/wiki/Trying-Your-App">Trying Your App</a></li>
+<li><a class="post-link" href="/wiki/Test-Bots">Test Bots</a></li>
+<li><a class="post-link" href="/wiki/Admin">Admin</a></li>
+<li><a class="post-link" href="/wiki/Running-Lab-Sessions">Running Lab Sessions</a></li>
+<li><a class="post-link" href="/wiki/Deploying-on-Heroku">Deploying on Heroku</a></li>
+<li><a class="post-link" href="/wiki/For-Django-Devs">For Django Devs</a></li>
+<li><a class="post-link" href="/wiki/Kiosk-Mode">Kiosk Mode</a></li>
+<li><a class="post-link" href="/wiki/Payment-PDF">Payment PDF</a></li>
+<li><a class="post-link" href="/wiki/Export-Data">Export Data</a></li>
+<li><a class="post-link" href="/wiki/AMT-Integration">AMT Integration</a></li>
+<li><a class="post-link" href="/wiki/Debug-Info">Debug Info</a></li>
+<li><a class="post-link" href="/wiki/Progress-Monitor">Progress Monitor</a></li>
+<li><a class="post-link" href="/wiki/Session-Interface">Session Interface</a></li>
+<li><a class="post-link" href="/wiki/User-Input-Validation">User Input Validation</a></li>
+</ul>
+
+        </td>
+    </tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+  <div class="p2 wrap">
+    <div class="measure mt1 center">
+      <small>
+        <a href="/sourcecode">License</a>
+      </small>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-53910404-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

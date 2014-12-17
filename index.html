@@ -1,79 +1,42 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="oTree : A software platform for economics experiments">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>oTree</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <h1 id="project_title">oTree</h1>
-          <h2 id="project_tagline">A software platform for economics experiments</h2>
-        </header>
+<div class="home">
+    <div class="fade">
+        <div align="center" style="margin: 60px auto;">
+            <a href="{{ site.baseurl }}/images/screenshots/3devices.png" data-lightbox="example-set" data-title="Multiplatform"><img src="{{ site.baseurl }}/images/screenshots/3devices_thumb.png" alt=""/></a>
+        </div>
+        <div align="center">
+            <a href="{{ site.baseurl }}/images/screenshots/iphone.png" data-lightbox="example-set" data-title="Iphone"><img src="{{ site.baseurl }}/images/screenshots/iphone_thumb.png" alt=""/></a>
+        </div>
+        <div align="center" style="margin: 20px auto;">
+            <a href="{{ site.baseurl }}/images/screenshots/android.jpg" data-lightbox="example-set" data-title="Android"><img src="{{ site.baseurl }}/images/screenshots/android_thumb.jpg" alt=""/></a>
+        </div>
+        <div align="center">
+            <a href="{{ site.baseurl }}/images/screenshots/debug.png" data-lightbox="example-set" data-title="Easy to debug"><img src="{{ site.baseurl }}/images/screenshots/debug_thumb.png" alt=""/></a>
+        </div>
+        <div align="center">
+            <a href="{{ site.baseurl }}/images/screenshots/many.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img src="{{ site.baseurl }}/images/screenshots/many_thumb.png" alt=""/></a>
+        </div>
+        <div align="center">
+            <a href="{{ site.baseurl }}/images/screenshots/transcription.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img src="{{ site.baseurl }}/images/screenshots/transcription_thumb.png" alt=""/></a>
+        </div>
+        <div align="center">
+            <a href="{{ site.baseurl }}/images/screenshots/pycharm.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img src="{{ site.baseurl }}/images/screenshots/pycharm_thumb.png" alt=""/></a>
+        </div>
     </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <p><img src="http://i.imgur.com/t8C9oG0.png" alt="oTree on 3 devices"></p>
-
-<ul>
-<li><a href="https://onedrive.live.com/redir?resid=F9813DEE7F07C54C!14437&authkey=!AD_6680Zvkb0k2Y&ithint=file%2cpptx">Introduction to oTree (slides)</a></li>
-<li><a href="http://demo.otree.org/">Live demo</a></li>
-<li><a href="https://github.com/oTree-org/oTree">Download &amp; source code</a></li>
-<li>
-<a href="https://github.com/oTree-org/otree/wiki">Wiki</a></li>
-<li>Working paper by <a href="http://www.dlchen.ethz.ch/">Daniel Chen</a>, <a href="http://www.n.ethz.ch/%7Escmartin/">Martin Schonger</a>, and <a href="mailto:chris@otree.org">Chris Wickens</a>: <a href="http://www.otree.org/oTree.pdf">oTree: An Open-Source Platform for Laboratory, Online, and Field Experiments</a>
-</li>
-</ul>
-
-<p style="font-size:small">oTree is named in homage to <a href="http://www.iew.uzh.ch/ztree/index.php">z-Tree</a>, the pioneering software in experimental economics. This follows in the tradition of naming open source projects after existing software, like Unix → Linux, C → C++, and mSQL → MySQL.</p>
-
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-    </div>
-
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-53910404-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
-
-<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-var sc_project=10142627; 
-var sc_invisible=1; 
-var sc_security="ca6ca232"; 
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="web counter"
-href="http://statcounter.com/free-hit-counter/"
-target="_blank"><img class="statcounter"
-src="http://c.statcounter.com/10142627/0/ca6ca232/1/"
-alt="web counter"></a></div></noscript>
-<!-- End of StatCounter Code for Default Guide -->
-
-
-  </body>
-</html>
+    <script type="text/javascript">
+    $(document).ready(function(){
+       $('.fade').owlCarousel({
+           'items' : 3,
+       });
+       });
+    </script> 
+    <p class="h4 center">A software platform for economics experiments</p>
+    <br>
+    <p>
+    This is a joint project of <a href="http://www.dlchen.ethz.ch/">Daniel Chen</a>, <a href="http://www.n.ethz.ch/%7Escmartin/">Martin Schonger</a>, and <a href="mailto:chris@otree.org">Chris Wickens</a>.
+    You can read about the platform in our paper <a href="{{ site.baseurl }}/oTree.pdf">oTree: An Open-Source Platform for Laboratory, Online, and Field Experiments</a>
+    </p>
+</div>
