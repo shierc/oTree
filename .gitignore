@@ -1,2 +1,4 @@
-_wiki/
+_site
+*.swp
 .sass-cache/
+_wiki
