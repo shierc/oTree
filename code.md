@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Source code and license information
-permalink: /sourcecode/
+permalink: /code/
 ---
 
 oTree is licensed under an open source license. The license, given below, is the

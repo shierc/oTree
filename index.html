@@ -3,40 +3,75 @@ layout: default
 ---
 
 <div class="home">
-    <p class="h4 center">A software platform for social science experiments</p>
-    <br>
     <div class="fade">
-        <div align="center" style="margin: 60px auto;">
-            <a href="{{ site.baseurl }}/images/screenshots/3devices.png" data-lightbox="example-set" data-title="Multiplatform"><img src="{{ site.baseurl }}/images/screenshots/3devices_thumb.png" alt=""/></a>
+        <div align="center" style="margin: 80px auto;">
+            <figure class="embed hide-smooth dark small">
+                <img src="{{ site.baseurl }}/images/screenshots/3devices.png" alt=""/>
+                <figcaption>
+                Runs on any Operating System
+                </figcaption>
+            </figure>
         </div>
         <div align="center">
-            <a href="{{ site.baseurl }}/images/screenshots/iphone.png" data-lightbox="example-set" data-title="Iphone"><img src="{{ site.baseurl }}/images/screenshots/iphone_thumb.png" alt=""/></a>
-        </div>
-        <div align="center" style="margin: 20px auto;">
-            <a href="{{ site.baseurl }}/images/screenshots/android.jpg" data-lightbox="example-set" data-title="Android"><img src="{{ site.baseurl }}/images/screenshots/android_thumb.jpg" alt=""/></a>
-        </div>
-        <div align="center">
-            <a href="{{ site.baseurl }}/images/screenshots/debug.png" data-lightbox="example-set" data-title="Easy to debug"><img src="{{ site.baseurl }}/images/screenshots/debug_thumb.png" alt=""/></a>
-        </div>
-        <div align="center">
-            <a href="{{ site.baseurl }}/images/screenshots/many.png" data-lightbox="example-set" data-title="Easy and clean controls"><img src="{{ site.baseurl }}/images/screenshots/many_thumb.png" alt=""/></a>
+            <figure class="embed hide-smooth dark">
+                <img src="{{ site.baseurl }}/images/screenshots/android.jpg" alt=""/>
+                <figcaption>
+                oTree on Android
+                </figcaption>
+            </figure>
         </div>
         <div align="center">
-            <a href="{{ site.baseurl }}/images/screenshots/transcription.png" data-lightbox="example-set" data-title="Input Validation"><img src="{{ site.baseurl }}/images/screenshots/transcription_thumb.png" alt=""/></a>
+            <figure class="embed hide-smooth dark">
+                <img src="{{ site.baseurl }}/images/screenshots/iphone.png" alt=""/>
+                <figcaption>
+                oTree on iOS
+                </figcaption>
+            </figure>
         </div>
         <div align="center">
-            <a href="{{ site.baseurl }}/images/screenshots/pycharm.png" data-lightbox="example-set" data-title="Easy to use development tools"><img src="{{ site.baseurl }}/images/screenshots/pycharm_thumb.png" alt=""/></a>
+            <figure class="embed hide-smooth dark">
+                <img src="{{ site.baseurl }}/images/screenshots/paper_like.png" alt=""/>
+                <figcaption>
+                Paper-like instructions
+                </figcaption>
+            </figure>
+        </div>
+        <div align="center">
+            <figure class="embed hide-smooth dark">
+                <img src="{{ site.baseurl }}/images/screenshots/errors.png" alt=""/>
+                <figcaption>
+                Custom error messages
+                </figcaption>
+            </figure>
+        </div>
+        <div align="center">
+            <figure class="embed hide-smooth dark">
+                <img src="{{ site.baseurl }}/images/screenshots/debug.png" alt=""/>
+                <figcaption>
+                oTree in debug mode
+                </figcaption>
+            </figure>
+        </div>
+        <div align="center">
+            <figure class="embed hide-smooth dark">
+                <img src="{{ site.baseurl }}/images/screenshots/pycharm.png" alt=""/>
+                <figcaption>
+                Easy to develop
+                </figcaption>
+            </figure>
         </div>
     </div>
     <script type="text/javascript">
     $(document).ready(function(){
        $('.fade').owlCarousel({
-           'items' : 3,
+           'singleItem': true,
+           'stopOnHover': true,
+           'autoPlay': 3000,
        });
        });
     </script> 
     <p>
-    This is a joint project by <a href="http://www.dlchen.ethz.ch/">Daniel Chen</a>, <a href="http://www.n.ethz.ch/%7Escmartin/">Martin Schonger</a>, and <a href="mailto:chris@otree.org">Chris Wickens</a>.
+    This is a joint project by <a target="_blank" href="http://www.dlchen.ethz.ch/">Daniel Chen</a>, <a target="_blank" href="http://www.n.ethz.ch/%7Escmartin/">Martin Schonger</a>, and <a href="mailto:chris@otree.org">Chris Wickens</a>.
     You can read about the platform in our paper <a href="{{ site.baseurl }}/oTree.pdf" target="_blank">oTree: An Open-Source Platform for Laboratory, Online, and Field Experiments</a>
     </p>
 </div>
