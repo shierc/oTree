@@ -10,13 +10,10 @@ To ease the learning curve of oTree, we strongly recommend using [PyCharm Profes
 * PyCharm has features that make oTree/Django development easier
 * oTree has special integration with PyCharm's code completion functionality
 * This documentation gives instructions assuming you are using PyCharm
-* We have not tested oTree with other editors
+* oTree has been thoroughly tested with PyCharm
 
-The free 30-day trial of the Professional Edition is recommended. After 30 days, you can either get a free Classroom License
-(as explained [here](http://www.jetbrains.com/pycharm/buy/index.jsp),
-or downgrade to the free Community Edition, 
-or buy an Academic License for $29.
+If you are a student, teacher, or professor, PyCharm Professional is [free](https://www.jetbrains.com/student/). Note: we recommend PyCharm Professional rather than PyCharm Community Edition.
+
 
 _TODO:_
-* how to select virtualenv interpreter
 * runserver & debug

@@ -29,7 +29,7 @@ You can define your session's properties in `sessions.py`. Here are the paramete
     SessionType(
         name='my_session',
         fixed_pay=1000,
-        subsession_apps=['trust', 'ultimatum', 'questionnaire'],
+        app_sequence=['trust', 'ultimatum', 'questionnaire'],
     )        
 
 ## Players vs. participants

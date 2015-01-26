@@ -20,7 +20,7 @@ Examples of code that could confuse a newcomer:
 * Don't delete unused imports in the <standard imports> section; a user should always be able to rely on those being there.
 
 ### Don't repeat yourself
-* If a certain page is being repeated in multiple apps, it may be better suited as a separate app that gets added to `subsession_apps` for each session in `sessions.py`. Examples: surveys and feedback pages.
+* If a certain page is being repeated in multiple apps, it may be better suited as a separate app that gets added to `app_sequence` for each session in `sessions.py`. Examples: surveys and feedback pages.
 * You should obey to Django's "Don't repeat yourself" principle: "Every distinct concept and/or piece of data should live in one, and only one, place. Redundancy is bad."
  * Numeric constants, even simple ones like 0.5 or 3, should go in the `Constants` class
 

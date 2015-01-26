@@ -60,13 +60,13 @@ This should be a dictionary where the keys are the elements of `form_fields`, an
 be auto-submitted.
 
 
-### `def variables_for_template(self)`
+### `def vars_for_template(self)`
 
 Get any variables that will be passed to the HTML template. Add them to the dictionary as key-value pairs.
 
 Example:
 
-    def variables_for_template(self):
+    def vars_for_template(self):
         return {'max_amount_offered': self.subsession.max_amount_offered,
                 'reject_payoff': Constants.payoff_if_rejected}
 
@@ -90,19 +90,10 @@ After the player clicks the "Next" button, oTree makes sure that any form fields
 
 Here you can put anything additional that should happen after form validation. If you don't need anything to be done, it's OK to leave this method blank, or to leave it out entirely.
 
-## `def variables_for_all_templates(self)`
+## `def vars_for_all_templates(self)`
 
 This function is useful when you need certain variables to be passed to multiple pages in your app.
-Instead of repeating the same values in each `variables_for_template`, you can define it in this function at the top of your views.py.
-
-<!---
-### time_limit_in_seconds()
-
-Your page can have a time limit, in which case the player will see a countdown timer on the page.
-This method lets you define what that time limit is.
-If the user exceeds the time limit, they can still submit the form, but once they submit,
-the `time_limit_was_exceeded` attribute will be set to `True`, which you can use to do anything you want.
---->
+Instead of repeating the same values in each `vars_for_template`, you can define it in this function at the top of your views.py.
 
 ## Wait pages
 
@@ -125,24 +116,3 @@ The text in the title of the wait page.
 ### `def body_text(self)`
 
 The text in the body of the wait page.
-
-## Currency formatting
-You can use the convert integer or float numbers to currency. For example, `c(5.10)` returns `"$5.10"`. oTree defaults to USD, but you can set to any currency code by specifying `PAYMENT_CURRENCY_CODE` in your project's `settings.py`. For example, you can set it to "EUR", "GBP", and so on.
-
-### Points
-If you set `USE_POINTS = True` in `settings.py`, then in-game currency amounts will be expressed in points rather than real money.
-For example, `c(10)` is displayed as `10 points`.
-You can specify the conversion rate to real money in `sessions.py` by providing a `money_per_point` argument to the `SessionType`.
-For example, if you pay the user 2 cents per point, you would set `money_per_point = 0.02`.
-
-You can convert a point amount to money using the `to_money()` method,
-which takes as an argument the current subsession
-(this is necessary because subsessions in different apps can have different conversion rates).
-
-Let's say `money_per_point = 0.02`
-
-```
-c(10) # evaluates to Currency(10 points)
-c(10).to_money(self.subsession) # evaluates to $0.20
-```
-

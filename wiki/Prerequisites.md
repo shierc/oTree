@@ -5,7 +5,7 @@ wikiPageName: Prerequisites
 menu: wiki
 ---
 
-This page is written for people who may not have Python development experience, and covers the basics of the command line, Python, pip, virtualenv, and an IDE. If you know about these tools, you can skip this page.
+This page is written for people who may not have Python development experience, and covers the basics of the command line, Python, pip, and an IDE. If you know about these tools, you can skip this page.
 
 ## Basic understanding of command line
 
@@ -39,57 +39,3 @@ On Mac/Unix, run:
 `sudo python get-pip.py`
 
 You will be asked to enter the admin password.
-	
-## virtualenv
-
-### Setup 
-
-Run ``pip install virtualenv`` on your command line. 
-
-On Mac/Unix, if you get an error, use ``sudo pip install virtualenv``.
-
-On Windows, if the system cannot find Pip, you might need to add it to your PATH. Assuming Python is installed in the standard location, the command is
-
-`setx PATH "%PATH%;C:\Python27\Scripts"`
-
-### Create a virtualenv
-
-Choose a location where you will do your oTree work (could be a directory named `oTree Projects`), and run the following command:
-
-    virtualenv venv
-
-This will create an isolated Python environment.
-This means you won't need administrator permissions to install libraries.
-It also means that your your oTree programs will not break when a system-wide Python library is updated,
-so your oTree experiment will still run the same way a year from now.
-
-#### Mac
-
-Go to your home directory (which appears in the sidebar of Finder windows),
-and create a new file in TextEdit called '.bash_profile' (or open it if it already exists).
-Add the following line::
-
-    source /[path to your venv]/venv/bin/activate
-
-Then save and close the file. Open a new Terminal window.
-You should see ``(venv)`` at the beginning of your prompt.
-
-#### Windows
-
-In PowerShell, type::
-
-    notepad $profile
-
-(You may be prompted to create a new file, which you should do.)
-Add the following line (including the dot at the beginning)::
-
-    . "C:\[path to your virtual environment]\venv\Scripts\activate.ps1"
-    
-Then save and close the file. Open a new PowerShell window.
-You should see ``(venv)`` at the beginning of your prompt.
-
-If you get an error stating that "the execution of scripts is disabled," run the command
-
-`Set-ExecutionPolicy Unrestricted`
-
-and try again.

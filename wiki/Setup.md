@@ -27,11 +27,9 @@ Right now, you have a fork of the oTree repository on GitHub, but you don't have
 1. On GitHub, navigate to your fork of the oTree repository.
 2. In the right sidebar of your fork's repository page, copy the clone URL for your fork.
 3. Open Terminal (for Mac and Linux users) or the command line (for Windows users).
-4. Go to the directory that contains your `venv`
+4. Go to the folder on your PC where you want to work on oTree (the next command will create an `oTree` folder here)
 4. Enter `git clone https://github.com/YOUR-USERNAME/oTree.git` 
 5. Enter `git remote add upstream https://github.com/oTree-org/oTree.git`
-
-At this point, the directory should contain directories `oTree` and `venv` side by side.
 
 ## Install dependencies
 Change into the `oTree` directory (the one containing `requirements_base.txt`), and run the following command:

@@ -1,7 +1,7 @@
 ---
 layout: wiki
-title: Running Lab Sessions
-wikiPageName: Running-Lab-Sessions
+title: Lab Experiments
+wikiPageName: Lab-Experiments
 menu: wiki
 ---
 

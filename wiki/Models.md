@@ -60,8 +60,8 @@ Each model field you define can also have a `doc=` argument. Any string you add 
 `Constants` is a place to put your app's parameters and other constants.
 
 These constants are required:
-* `players_per_group` should be set to the number of players in a group of this game type. For example, in a 2-player game like an ultimatum game or prisoner's dilemma, you would set this to 2. If your app does not involve dividing the players into multiple groups, then set it to 0, 1, or None (which are all treated the same way). e.g. it is a single-player game or an auction where everybody in the subsession interacts together as 1 group. In this case, `self.group.get_players()` will return everybody in the subsession.
-* `number_of_rounds` is the number of rounds this game should be played
+* `players_per_group` should be set to the number of players in a group of this game type. For example, in a 2-player game like an ultimatum game or prisoner's dilemma, you would set this to 2. If your app does not involve dividing the players into multiple groups, then set it to `None`. e.g. it is a single-player game or an auction where everybody in the subsession interacts together as 1 group. In this case, `self.group.get_players()` will return everybody in the subsession.
+* `num_rounds` is the number of rounds this game should be played
 * `name_in_url` is an attribute that defines the name this app has in the URLs, which players may see.
 
 

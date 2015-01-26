@@ -26,7 +26,7 @@ To run tests for all sessions in `sessions.py`, run:
 
 ### Writing tests
 
-Tests are contained in your app's `tests.py`. Fill out the `play()` method of your `PlayerBot` (and `ExperimenterBot` if you have experimenter pages. It should simulate each page submission. For example:
+Tests are contained in your app's `tests.py`. Fill out the `play_round()` method of your `PlayerBot` (and `ExperimenterBot` if you have experimenter pages). It should simulate each page submission. For example:
 
     self.submit(views.Start)
     self.submit(views.Offer, {'offer_amount': 50})

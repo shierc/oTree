@@ -9,6 +9,10 @@ This wiki contains the information you need to create and run your own games and
 
 See the topics in the sidebar. Below is a summary of the steps in oTree development.
 
+### Note
+
+If you are looking for someone to program your oTree experiments for you, you can email me at chris@otree.org and I can put you in touch with someone. Conversely, you can also contact me if you are a developer who is experienced with oTree and want to program experiments for others.
+
 ### Setup
 
 After forking & cloning the repo:

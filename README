@@ -4,9 +4,9 @@ The wiki is build using modified version of
 this ruby script https://github.com/djacquel/WikiToJekyll
 I have added wiki menu generation function into the original script.
 
-To rebuild wiki you need to run this code
+To sync and rebuild wiki you need to run this code
 
-    rake wikibuild
+    rake wiki
 
 It should automatically fetch new version of wiki from 
 repository and reshape it for the website.
