@@ -18,7 +18,3 @@ Follow the steps above, with the exception that you have to run oTree.sh from th
 
 ### Mac 
 The installer for Mac is coming soon. For now, Mac users can install oTree from the command line by following the instructions on our [github page] (https://github.com/oTree-org/oTree).
-
-
-
- 
