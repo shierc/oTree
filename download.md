@@ -3,7 +3,6 @@ layout: page
 title: Download
 permalink: /download/
 ---
-## Installation 
 
 ### Windows 
 - Install [Python 2.7](https://www.python.org/download/releases/2.7.7/)
@@ -18,3 +17,6 @@ Follow the steps above, with the exception that you have to run oTree.sh from th
 
 ### Mac 
 The installer for Mac is coming soon. For now, Mac users can install oTree from the command line by following the instructions on our [github page] (https://github.com/oTree-org/oTree).
+
+### Mailing list
+Sign up to be notified about updates to oTree [here](https://docs.google.com/forms/d/1jD4tocuX07DFYN2jDY2tcNXpkOCSqLhSOMboOgaVGtw/viewform)
