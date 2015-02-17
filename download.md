@@ -10,6 +10,7 @@ permalink: /download/
 - Double click oTree.bat or oTree.exe 
 - When the app window launches, click the buttons to create a new deploy and  choose a location to store your project files.
 - Click runserver button.
+- Sign up for our [mailing list](https://docs.google.com/forms/d/1jD4tocuX07DFYN2jDY2tcNXpkOCSqLhSOMboOgaVGtw/viewform)
 
 ### Linux 
 
@@ -18,5 +19,3 @@ Follow the steps above, with the exception that you have to run oTree.sh from th
 ### Mac 
 The installer for Mac is coming soon. For now, Mac users can install oTree from the command line by following the instructions on our [github page] (https://github.com/oTree-org/oTree).
 
-### Mailing list
-Sign up to be notified about updates to oTree [here](https://docs.google.com/forms/d/1jD4tocuX07DFYN2jDY2tcNXpkOCSqLhSOMboOgaVGtw/viewform)
