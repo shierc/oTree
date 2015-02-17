@@ -6,7 +6,7 @@ permalink: /download/
 
 ### Windows 
 - Install [Python 2.7](https://www.python.org/download/releases/2.7.7/)
-- Download and unzip: https://github.com/oTree-org/otree-launcher/archive/master.zip
+- Download and unzip the [oTree launcher](https://github.com/oTree-org/otree-launcher/archive/master.zip)
 - Double click oTree.bat or oTree.exe 
 - When the app window launches, click the buttons to create a new deploy and  choose a location to store your project files.
 - Click runserver button
