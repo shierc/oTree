@@ -19,6 +19,7 @@ def g(key)
 end
 
 
+
 def get_wiki_repository_url
 
   derived_url = 'https://github.com/' + g('user_name') + '/' + g('repository_name') + '.wiki.git'
