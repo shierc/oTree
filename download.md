@@ -9,8 +9,9 @@ permalink: /download/
 - Download and unzip: https://github.com/oTree-org/otree-launcher/archive/master.zip
 - Double click oTree.bat or oTree.exe 
 - When the app window launches, click the buttons to create a new deploy and  choose a location to store your project files.
-- Click runserver button.
-- Sign up for our [mailing list](https://docs.google.com/forms/d/1jD4tocuX07DFYN2jDY2tcNXpkOCSqLhSOMboOgaVGtw/viewform)
+- Click runserver button
+
+You can sign up for our [mailing list](https://docs.google.com/forms/d/1jD4tocuX07DFYN2jDY2tcNXpkOCSqLhSOMboOgaVGtw/viewform) for updates about oTree.
 
 ### Linux 
 
