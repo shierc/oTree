@@ -13,8 +13,8 @@ oTree is licensed under
 #### Is it easy to start with oTree?
 
 Yes, oTree has already more than two dozens games implemented.
-Modifying existing games or even creating your own is extremely easy
-(checkout the [docs]({{ site.url_docs }}) for guidelines).
+Modifying existing games or even creating your own is easy
+(check out the [docs]({{ site.url_docs }}) for guidelines).
 
 #### Can I have interactive games?
 
