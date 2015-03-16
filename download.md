@@ -24,7 +24,7 @@ oTree can be installed on Windows, Mac, and Linux.
 to an easy-to-access location, because you will go here every time you want to run the oTree launcher.
 (In other words, you probably don't want to zip it in a temp folder or your downloads folder)
 - Double click oTree.bat (or, if it doesn't work, oTree.exe, but you may see an antivirus warning)
-- Initial setup will take several minutes to download and setup. It may take 5-10 minutes.
+- Initial setup may take 5-10 minutes.
 - When the app window launches, click the buttons to create a new deploy and  choose a location to store your project files.
 - Click runserver button
 - Note: the oTree launcher is not installed as an app in your start menu. To reopen the launcher, simply double click oTree.bat again.
@@ -34,7 +34,7 @@ to an easy-to-access location, because you will go here every time you want to r
 to an easy-to-access location, because you will go here every time you want to run the oTree launcher.
 (In other words, you probably don't want to zip it in a temp folder or your downloads folder)
 - Open the terminal and run oTree.sh
-- Initial setup will take several minutes to download and setup. It may take 5-10 minutes.
+- Initial setup may take 5-10 minutes.
 - When the app window launches, click the buttons to create a new deploy and  choose a location to store your project files.
 - Click runserver button
 - Initial setup will take several minutes to download and setup. It may take 5-10 minutes.
