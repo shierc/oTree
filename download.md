@@ -20,6 +20,8 @@ oTree can be installed on Windows, Mac, and Linux.
 
         C:\Windows;C:\Windows\System32;C:\Python27
 
+    * Verify that it worked by opening your command prompt and entering `python`. You should see the `>>>` prompt.
+
 - Download and unzip the [oTree launcher](https://github.com/oTree-org/otree-launcher/archive/master.zip)
 to an easy-to-access location, because you will go here every time you want to run the oTree launcher.
 (In other words, you probably don't want to zip it in a temp folder or your downloads folder)
@@ -30,6 +32,9 @@ to an easy-to-access location, because you will go here every time you want to r
 - Note: the oTree launcher is not installed as an app in your start menu. To reopen the launcher, simply double click oTree.bat again.
 
 ## Mac/Linux
+- On Mac/Unix, it is very likely that Python is already installed.
+Open the Terminal and write `python` and hit Enter.
+If you get something like `-bash: python: command not found` you will have to install it yourself.
 - Download and unzip the [oTree launcher](https://github.com/oTree-org/otree-launcher/archive/master.zip)
 to an easy-to-access location, because you will go here every time you want to run the oTree launcher.
 (In other words, you probably don't want to zip it in a temp folder or your downloads folder)
@@ -37,7 +42,6 @@ to an easy-to-access location, because you will go here every time you want to r
 - Initial setup may take 5-10 minutes.
 - When the app window launches, click the buttons to create a new deploy and  choose a location to store your project files.
 - Click runserver button
-- Initial setup will take several minutes to download and setup. It may take 5-10 minutes.
 - Note: the oTree launcher is not installed as an app in your Applications folder. To reopen the launcher, simply run oTree.sh again.
 
 ## After installing
