@@ -12,7 +12,7 @@ oTree can be installed on Windows, Mac, and Linux.
 
 - Add python to your `Path` environment variable
     * Open the Windows Start menu
-    * Search for "environment". You should see "Edit the system environment variables"
+    * Search for "Edit the system environment variables", and then click it.
     * Click `Environment Variables`
     * Select `PATH` in the `System variables` section
     * Click `Edit`
