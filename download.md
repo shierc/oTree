@@ -24,7 +24,8 @@ oTree can be installed on Windows, Mac, and Linux.
 
 - Download and unzip the [oTree launcher](https://github.com/oTree-org/otree-launcher/archive/master.zip)
 to an easy-to-access location, because you will go here every time you want to run the oTree launcher.
-(In other words, you probably don't want to zip it in a temp folder or your downloads folder)
+(In other words, you probably don't want to zip it in a temp folder or your downloads folder). Also, the path should
+not contain non-ASCII characters (e.g. `é` or `好`). (This is a bug we are currently fixing)
 - Double click oTree.bat (or, if it doesn't work, oTree.exe, but you may see an antivirus warning)
 - Initial setup may take 5-10 minutes.
 - When the app window launches, click the buttons to create a new deploy and  choose a location to store your project files.
