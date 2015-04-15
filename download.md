@@ -5,6 +5,7 @@ permalink: /download/
 ---
 
 oTree can be installed on Windows, Mac, and Linux.
+If you encounter any error during installation, please email chris@otree.org with the error message.
 
 ## Windows
 - Download and run the [Python 2.7 installer](https://www.python.org/download/releases/2.7.8/).
@@ -49,5 +50,5 @@ to an easy-to-access location, because you will go here every time you want to r
 - When the app window launches, click the buttons to create a new deploy and  choose a location to store your project files.
 - Click runserver button
 
+## Mailing list
 You can sign up for our [mailing list](https://docs.google.com/forms/d/1jD4tocuX07DFYN2jDY2tcNXpkOCSqLhSOMboOgaVGtw/viewform) for updates about oTree.
-
