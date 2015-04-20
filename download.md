@@ -40,7 +40,7 @@ If you get something like `-bash: python: command not found` you will have to in
 - Download and unzip the [oTree launcher](https://github.com/oTree-org/otree-launcher/archive/master.zip)
 to an easy-to-access location, because you will go here every time you want to run the oTree launcher.
 (In other words, you probably don't want to zip it in a temp folder or your downloads folder)
-- Open the terminal and run oTree.sh
+- Open the terminal and run `bash otree.sh`
 - Initial setup may take 5-10 minutes.
 - When the app window launches, click the buttons to create a new deploy and  choose a location to store your project files.
 - Click runserver button
