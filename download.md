@@ -23,8 +23,8 @@ If you encounter any error during installation, please email chris@otree.org wit
 
     * Verify that it worked by opening your command prompt and entering `python`. You should see the `>>>` prompt.
 
-- Download and unzip the [oTree launcher](https://github.com/oTree-org/otree-launcher/archive/master.zip)
-to an easy-to-access location, because you will go here every time you want to run the oTree launcher.
+- Download [https://github.com/oTree-org/otree-launcher/archive/master.zip](https://github.com/oTree-org/otree-launcher/archive/master.zip)
+- Unzip it to an easy-to-access location, because you will go here every time you want to run the oTree launcher.
 (In other words, you probably don't want to zip it in a temp folder or your downloads folder). Also, the path should
 not contain non-ASCII characters (e.g. `é` or `好`). (This is a bug we are currently fixing)
 - Double click oTree.bat (or, if it doesn't work, oTree.exe, but you may see an antivirus warning)
@@ -37,8 +37,8 @@ not contain non-ASCII characters (e.g. `é` or `好`). (This is a bug we are cur
 - On Mac/Unix, it is very likely that Python is already installed.
 Open the Terminal and write `python` and hit Enter.
 If you get something like `-bash: python: command not found` you will have to install it yourself.
-- Download and unzip the [oTree launcher](https://github.com/oTree-org/otree-launcher/archive/master.zip)
-to an easy-to-access location, because you will go here every time you want to run the oTree launcher.
+- Download [https://github.com/oTree-org/otree-launcher/archive/master.zip](https://github.com/oTree-org/otree-launcher/archive/master.zip)
+- Unzip it to an easy-to-access location, because you will go here every time you want to run the oTree launcher.
 (In other words, you probably don't want to zip it in a temp folder or your downloads folder)
 - Open the terminal and run `bash otree.sh`
 - Initial setup may take 5-10 minutes.
