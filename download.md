@@ -4,7 +4,7 @@ title: Download
 permalink: /download/
 ---
 
-If you encounter any error during installation, please email chris@otree.org with the error message.
+Below are the download instructions. If you encounter any error during installation, please email chris@otree.org with the error message.
 
 ## Windows
 - Download and run the [Python 2.7 installer](https://www.python.org/download/releases/2.7.8/).
