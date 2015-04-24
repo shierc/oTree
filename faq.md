@@ -24,3 +24,7 @@ Yes, oTree supports both interactive and non-interactive games.
 
 Yes, oTree has integration with AMT
 (checkout the [docs]({{ site.url_docs }}#amazon-mechanical-turk) for guidelines)
+
+#### What if I encounter a bug in oTree?
+
+Send the details to chris@otree.org. I will fix most issues within 1 day.
