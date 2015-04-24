@@ -4,7 +4,6 @@ title: Download
 permalink: /download/
 ---
 
-oTree can be installed on Windows, Mac, and Linux.
 If you encounter any error during installation, please email chris@otree.org with the error message.
 
 ## Windows
