@@ -5,6 +5,7 @@ permalink: /download/
 ---
 
 Below are the download instructions. If you encounter any error during installation, please email chris@otree.org with the error message.
+You can also sign up for our [mailing list](https://docs.google.com/forms/d/1jD4tocuX07DFYN2jDY2tcNXpkOCSqLhSOMboOgaVGtw/viewform) for updates about oTree.
 
 ## Windows
 - Download and run the [Python 2.7 installer](https://www.python.org/download/releases/2.7.8/).
