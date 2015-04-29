@@ -45,7 +45,7 @@ If you get something like `-bash: python: command not found` you will have to in
 - Unzip it to an easy-to-access location, because you will go here every time you want to run the oTree launcher.
 (In other words, you probably don't want to zip it in a temp folder or your downloads folder). Also, the path should
 only contain ASCII characters (not `é` or `好`). (This is a bug we are currently fixing)
-- On Windows: Double click otree.bat (or, if it doesn't work, otree.exe, but you may see an antivirus warning)
+- On Windows: Run otree.bat (double click, or right-click and select "Run as administrator"). If it doesn't work, you can run otree.exe, but you may see an antivirus warning.
 - On Mac OSX: Open the terminal and run `bash otree.sh`
 - Initial setup may take 5-10 minutes.
 - When the app window launches, click the buttons to create a new deploy and  choose a location to store your project files.
