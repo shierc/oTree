@@ -30,7 +30,7 @@ If you get something like `-bash: python: command not found` you will have to in
 ### Plain install
 
 * From your command line, run the command `pip` to check if Pip is installed. If not, you can download it [here](https://pip.pypa.io/en/latest/installing.html).
-* Download [oTree](https://github.com/oTree-org/oTree/archive/master.zip) and unzip it to a convenient location. (Or, use Git to clone [this repo](https://github.com/oTree-org/otree))
+* Download [oTree](https://github.com/oTree-org/oTree/archive/master.zip) and unzip it to a convenient location (such as your "Documents" folder). (Or, use Git to clone [this repo](https://github.com/oTree-org/otree))
 * In your command line, go to the root directory where `requirements_base.txt` is, and run these commands (you may need administrator permissions):
 
     ```
