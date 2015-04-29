@@ -43,7 +43,7 @@ If you get something like `-bash: python: command not found` you will have to in
 - Download [https://github.com/oTree-org/otree-launcher/archive/master.zip](https://github.com/oTree-org/otree-launcher/archive/master.zip)
 - Unzip it to an easy-to-access location, because you will go here every time you want to run the oTree launcher.
 (In other words, you probably don't want to zip it in a temp folder or your downloads folder). Also, the path should
-not contain non-ASCII characters (e.g. `é` or `好`). (This is a bug we are currently fixing)
+only contain ASCII characters (not `é` or `好`). (This is a bug we are currently fixing)
 - On Windows: Double click oTree.bat (or, if it doesn't work, oTree.exe, but you may see an antivirus warning)
 - On Mac OSX: Open the terminal and run `bash otree.sh`
 - Initial setup may take 5-10 minutes.
