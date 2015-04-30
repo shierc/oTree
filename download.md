@@ -55,7 +55,12 @@ If you get something like `-bash: python: command not found` you will have to in
 
 ### Troubleshooting
 
-* Problem: You get this message: `'python' is not recognized as an internal or external command, operable program or batch file.`
+* Problem: You get this message:
+
+```
+'python' is not recognized as an internal or external command, operable program or batch file.`
+```
+
   * Solution: make sure Python is installed and add it to your `Path` as described above.
 * Problem: You get this message:
 
