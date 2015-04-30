@@ -20,7 +20,8 @@ You can also sign up for our [mailing list](https://docs.google.com/forms/d/1jD4
   * Click `Environment Variables`
   * Select `Path` in the `System variables` section
   * Click `Edit`
-  * Add `;C:\Python27` to the end of the list (the paths are separated by semicolons). For example: `C:\Windows;C:\Windows\System32;C:\Python27`
+  * Add `;C:\Python27;C:\Python27\Scripts` to the end of the list (the paths are separated by semicolons). For example: `C:\Windows;C:\Windows\System32;C:\Python27;C:\Python27\Scripts`
+    * (This assumes that Python was installed to `C:\Python27`.)
 
 * On Mac/Unix, it is very likely that Python is already installed.
 You can check by opening the Terminal and writing `python` and hit Enter.
