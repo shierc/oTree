@@ -62,6 +62,7 @@ If you get something like `-bash: python: command not found` you will have to in
 ```
 
   * Solution: make sure Python is installed and add it to your `Path` as described above.
+
 * Problem: You get this message:
 
 ```
