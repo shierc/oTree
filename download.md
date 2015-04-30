@@ -61,7 +61,7 @@ If you get something like `-bash: python: command not found` you will have to in
 'python' is not recognized as an internal or external command, operable program or batch file.`
 ```
 
-  * Solution: make sure Python is installed and add it to your `Path` as described above.
+* Solution: make sure Python is installed and add it to your `Path` as described above.
 
 * Problem: You get this message:
 
@@ -78,7 +78,7 @@ IOError: Resource 'version.json' not exists
 Press any key to continue . . .
 ```
 
-  * Solution: this occurs sometimes when the path contains non-Latin characters like `好` or `д`. Move the launcher to a file path without these characters.
+* Solution: this occurs sometimes when the path contains non-Latin characters like `好` or `д`. Move the launcher to a file path without these characters.
 
 If you encounter any error during installation, please email chris@otree.org with the error message.
 
