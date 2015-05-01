@@ -31,7 +31,7 @@ If you get something like `-bash: python: command not found` you will have to in
 ### Plain install
 
 * From your command line, run the command `pip` to check if Pip is installed. If not, you can download it [here](https://pip.pypa.io/en/latest/installing.html).
-* Download [oTree](https://github.com/oTree-org/oTree/archive/master.zip) and unzip it to a convenient location (such as your "Documents" folder). (Or, use Git to clone [this repo](https://github.com/oTree-org/otree))
+* Download [oTree](https://github.com/oTree-org/oTree/archive/master.zip) and unzip it to a convenient location (such as your "Documents" folder). (Or better yet, use Git to clone [this repo](https://github.com/oTree-org/otree))
 * In your command line, go to the root directory of the unzipped folder where `requirements_base.txt` is
   * Note: if you cannot find `requirements_base.txt` make sure you have downloaded `oTree-master.zip`, not `otree-launcher-master.zip`, which is a different download.
 * Run these commands (you may need administrator permissions):
@@ -42,8 +42,9 @@ If you get something like `-bash: python: command not found` you will have to in
     ./otree runserver
     ```
 
-
 ### Launcher install
+
+Note: the launcher is still experimental.
 
 - Download [https://github.com/oTree-org/otree-launcher/archive/master.zip](https://github.com/oTree-org/otree-launcher/archive/master.zip)
 - Unzip it to an easy-to-access location, like your "Documents" folder.
