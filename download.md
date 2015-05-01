@@ -44,8 +44,6 @@ If you get something like `-bash: python: command not found` you will have to in
 
 ### Launcher install
 
-Note: the launcher is still experimental.
-
 - Download [https://github.com/oTree-org/otree-launcher/archive/master.zip](https://github.com/oTree-org/otree-launcher/archive/master.zip)
 - Unzip it to an easy-to-access location, like your "Documents" folder.
 - On Windows: Run otree.bat (double click, or right-click and select "Run as administrator"). If it doesn't work, you can run otree.exe.
