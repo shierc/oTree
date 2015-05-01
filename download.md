@@ -55,6 +55,12 @@ If you get something like `-bash: python: command not found` you will have to in
 
 ### Troubleshooting
 
+If you encounter any error during installation, please email chris@otree.org with the error message.
+If you are using the launcher, please attach the error log file. On Windows this file is located at: `%APPDATA%/otree-launcher/launcher.log`
+On OSX it is at `~/.otree-launcher/launcher.log`.
+
+Here are some specific issues along with their solutions.
+
 * Problem: You get this message:
 
 ```
@@ -79,5 +85,4 @@ Press any key to continue . . .
 
 * Solution: this occurs sometimes when the path contains non-Latin characters like `好` or `д`. Move the launcher to a file path without these characters.
 
-If you encounter any error during installation, please email chris@otree.org with the error message.
 
