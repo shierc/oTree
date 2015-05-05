@@ -6,6 +6,7 @@ description: "oTree : A software platform for economics experiments"
 baseurl:     ""
 url:         ""
 url_docs:    "https://github.com/oTree-org/oTree/blob/master/README.md#docs"
+url_tutorial: "https://github.com/oTree-org/oTree/blob/master/_docs/tutorial.md"
 
 # Google analytics
 google_analytics: UA-53910404-1
