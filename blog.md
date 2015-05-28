@@ -14,9 +14,9 @@ There is a new version of otree-core with the following improvements/bugfixes:
 * Better warning if database is not created
 * Validate apps before publishing to MTurk
 
-To upgrade, modify the ``otree-core`` version number in ``requirements_base.txt`` (the
+To upgrade, modify the `otree-core` version number in `requirements_base.txt` (the
 latest version is
-`here <https://github.com/oTree-org/oTree/blob/master/requirements_base.txt>`__),
+[here](https://github.com/oTree-org/oTree/blob/master/requirements_base.txt)),
 then run:
 
 ```
