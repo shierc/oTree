@@ -27,4 +27,4 @@ Yes, oTree has integration with AMT
 
 #### What if I encounter a bug in oTree?
 
-Send the details to chris@otree.org. We will fix most issues within 1 day.
+Send the details to chris@otree.org. We will fix most issues within a few days.
