@@ -13,6 +13,7 @@ There is a new version of otree-core with the following improvements/bugfixes:
 * `get_players()` was sometimes returning players in the wrong order
 * Better warning if database is not created
 * Validate apps before publishing to MTurk
+* Validation of min= and max= were not being done in Safari
 
 To upgrade, modify the `otree-core` version number in `requirements_base.txt` (the
 latest version is
