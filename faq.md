@@ -28,3 +28,7 @@ Yes, oTree has integration with AMT
 #### What if I encounter a bug in oTree?
 
 Send the details to chris@otree.org. We will fix most issues within a few days.
+
+#### Can I hire someone to build my oTree app for me?
+
+Sure. Send an email to chris@otree.org and I can put you in touch with some freelance developers who have experience with oTree programming.
