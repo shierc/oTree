@@ -21,7 +21,8 @@ then run:
 pip install -r requirements_base.txt
 ```
 
-Thanks to the users who reported the above issues and made suggestions!
+Thanks to the users who reported the above issues,
+and to those who contributed translations to different languages!
 
 
 #### 2015-05-29: New version available
