@@ -28,7 +28,7 @@ Yes, oTree has integration with AMT
 #### What languages does oTree support?
 
 Apps can be programmed in English, Spanish, French, and Russian.
-See [docs]({{ site.url_localization }}) for more info.
+For more info or to contribute an additional language, see the [docs]({{ site.url_localization }}).
 
 #### How stable is oTree?
 
