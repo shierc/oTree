@@ -8,7 +8,7 @@ permalink: /blog/
 
 There is a new version of otree-core with the following improvements/bugfixes:
 
-* oTree localized to French, Spanish, and Russian (see {{ site.url_localization }})
+* oTree localized to French, Spanish, and Russian (see [docs]({{ site.url_localization }}))
 * Fixed bug with `group_by_arrival_time`
 * Minor improvements and bugfixes
 
