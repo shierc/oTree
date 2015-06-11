@@ -25,6 +25,11 @@ Yes, oTree supports both interactive and non-interactive games.
 Yes, oTree has integration with AMT
 (checkout the [docs]({{ site.url_docs }}#amazon-mechanical-turk) for guidelines)
 
+#### What languages does oTree support?
+
+Apps can be programmed in English, Spanish, French, and Russian.
+See [docs]({{ site.url_localization }}) for more info.
+
 #### How stable is oTree?
 
 oTree is in beta. Some parts of oTree are still under development and may have bugs.
@@ -32,8 +37,6 @@ Therefore, if you are launching a real experiment,
 you should start developing and testing well in advance, to prevent last-minute surprises,
 and to give us time to investigate any bugs you discover.
 (If you encounter a bug in oTree, please email chris@otree.org.)
-
-
 
 
 #### Can I hire someone to build my oTree app for me?
