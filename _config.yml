@@ -9,6 +9,7 @@ url_docs:    "http://otree.readthedocs.org/en/latest/"
 url_download: "http://otree.readthedocs.org/en/latest/setup.html"
 url_tutorial: "http://otree.readthedocs.org/en/latest/tutorial/intro.html"
 url_ztree: "http://otree.readthedocs.org/en/latest/ztree.html"
+url_localization: "http://otree.readthedocs.org/en/latest/localization.html"
 
 # Google analytics
 google_analytics: UA-53910404-1

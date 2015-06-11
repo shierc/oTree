@@ -31,8 +31,10 @@ oTree is in beta. Some parts of oTree are still under development and may have b
 Therefore, if you are launching a real experiment,
 you should start developing and testing well in advance, to prevent last-minute surprises,
 and to give us time to investigate any bugs you discover.
+(If you encounter a bug in oTree, please email chris@otree.org.)
 
-If you encounter a bug in oTree, please email chris@otree.org.
+
+
 
 #### Can I hire someone to build my oTree app for me?
 
