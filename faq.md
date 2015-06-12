@@ -9,7 +9,7 @@ permalink: /faq/
 Yes, oTree is fully open source.
 oTree is licensed under the
  <a href="http://opensource.org/licenses/MIT" target="_blank">MIT open source license</a>
- with the added requirement of a citation (see the [license]({{ site.baseurl }}/code)).
+ with the added requirement of a citation (see the [license]({{ site.baseurl }}/source)).
 
 #### Is it easy to start with oTree?
 
