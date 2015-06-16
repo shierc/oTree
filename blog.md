@@ -4,6 +4,14 @@ title: Blog
 permalink: /blog/
 ---
 
+#### 2015-06-17: Skype "office hours"
+
+If you have questions about oTree, I will be available to give help via Skype call on Tuesday June 23 at 4PM Zurich time (10AM New York time).
+I will be online for 2 hours. You can ask any general questions, and we can use Skype/TeamViewer screen sharing to work through oTree installation or code writing.
+
+You can add me on Skype by searching by my email (chris@otree.org).
+
+
 #### 2015-06-11: New version available
 
 There is a new version of otree-core with the following improvements/bugfixes:
