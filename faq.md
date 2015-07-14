@@ -16,9 +16,9 @@ oTree is licensed under the
 Yes, it is easy to modify one of our 20+ existing games or create your own.
 (check out the [tutorial]({{ site.url_tutorial }}) or the [docs]({{ site.url_docs }}) for guidelines).
 
-#### Can I have interactive multiplayer games?
+#### Can I hire someone to build my oTree app for me?
 
-Yes, oTree supports both interactive and non-interactive games.
+Yes. Send an email to chris@otree.org and I can put you in touch with some freelance developers who have experience with oTree programming.
 
 #### Can I use oTree with AMT (Amazon Mechanical Turk)?
 
@@ -39,9 +39,3 @@ and to give us time to investigate any bugs you discover.
 (If you encounter a bug in oTree, please email chris@otree.org.)
 
 For best results, contact us so that we are aware of your plans and can give you guidance.
-
-
-#### Can I hire someone to build my oTree app for me?
-
-Sure. Send an email to chris@otree.org and I can put you in touch with some freelance developers who have experience with oTree programming.
-This is a reliable option if you really need something built.
