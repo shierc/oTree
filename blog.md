@@ -9,7 +9,7 @@ permalink: /blog/
 * Fixed problem where users got stuck on a waiting page
 * Added `otree runprodserver` command
 * Made timeout work even if browser window is closed
-* Implemented Group.in_all_rounds() and Group.in_previous_rounds()
+* Implemented `Group.in_all_rounds()` and `Group.in_previous_rounds()`
 * Fixed bug in MTurk payment
 * Made time limit always display
 * Cleaned up MTurk settings
