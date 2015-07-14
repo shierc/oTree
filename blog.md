@@ -4,23 +4,21 @@ title: Blog
 permalink: /blog/
 ---
 
-#### 2015-06-17
+#### 2015-07-14: New version available
 
-If you have questions about oTree, I will be available to give help via Skype call on **Tuesday June 23** at 4PM Zurich time (10AM New York time).
-I will be online for 2 hours. You can ask any general questions, and we can use Skype/TeamViewer screen sharing to work through oTree installation or code writing.
+* Fixed problem where users got stuck on a waiting page
+* Added `otree runprodserver` command
+* Made timeout work even if browser window is closed
+* Implemented Group.in_all_rounds() and Group.in_previous_rounds()
+* Fixed bug in MTurk payment
+* Made time limit always display
+* Cleaned up MTurk settings
+* Several other MTurk fixes
 
-You can add me on Skype by searching by my email (chris@otree.org).
+To upgrade, open the launcher and click "Version select" and select the most recent version in the menu.
+(Only works on launcher version 0.7.5 and above.)
 
-
-#### 2015-06-11: New version available
-
-There is a new version of otree-core with the following improvements/bugfixes:
-
-* oTree localized to French, Spanish, and Russian (see [docs]({{ site.url_localization }}))
-* Fixed bug with `group_by_arrival_time`
-* Minor improvements and bugfixes
-
-To upgrade, modify the `otree-core` version number in `requirements_base.txt` (the
+Otherwise, modify the `otree-core` version number in `requirements_base.txt` (the
 latest version is
 [here](https://github.com/oTree-org/oTree/blob/master/requirements_base.txt)),
 then run:
@@ -31,6 +29,15 @@ pip install -r requirements_base.txt
 
 Thanks to the users who reported the above issues,
 and to those who contributed translations to different languages!
+
+
+#### 2015-06-11: New version available
+
+There is a new version of otree-core with the following improvements/bugfixes:
+
+* oTree localized to French, Spanish, and Russian (see [docs]({{ site.url_localization }}))
+* Fixed bug with `group_by_arrival_time`
+* Minor improvements and bugfixes
 
 
 #### 2015-05-29: New version available
