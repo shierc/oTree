@@ -6,7 +6,7 @@ permalink: /blog/
 
 #### 2015-07-25: New version available
 
-We have released a new version of otree-core. It fixes an error where users got this error message:
+We have released a new version of otree-core. It fixes an error many users reported:
 
 ```
 django.template.base.TemplateEncodingError: Templates can only be constructed from unicode or UTF-8 strings.
