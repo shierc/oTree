@@ -4,18 +4,15 @@ title: Blog
 permalink: /blog/
 ---
 
-#### 2015-07-14: New version available
+#### 2015-07-25: New version available
 
-* Fixed problem where users got stuck on a waiting page
-* Added `otree runprodserver` command
-* Made timeout work even if browser window is closed
-* Implemented `Group.in_all_rounds()` and `Group.in_previous_rounds()`
-* Fixed bug in MTurk payment
-* Made time limit always display
-* Cleaned up MTurk settings
-* Several other MTurk fixes
+We have released a new version of otree-core. It fixes an error where users got this error message:
 
-To upgrade, open the launcher and click "Version select" and select the most recent version in the menu.
+```
+django.template.base.TemplateEncodingError: Templates can only be constructed from unicode or UTF-8 strings.
+```
+
+To upgrade, open the launcher and click "Version select" and select version 0.3.19 or higher.
 (Only works on launcher version 0.7.5 and above.)
 
 Otherwise, modify the `otree-core` version number in `requirements_base.txt` (the
@@ -27,8 +24,21 @@ then run:
 pip install -r requirements_base.txt
 ```
 
-Thanks to the users who reported the above issues,
-and to those who contributed translations to different languages!
+Thanks to the users who reported the above issue.
+
+
+#### 2015-07-14: New version available
+
+Here are some changes:
+
+* Fixed problem where users got stuck on a waiting page
+* Added `otree runprodserver` command
+* Made timeout work even if browser window is closed
+* Implemented `Group.in_all_rounds()` and `Group.in_previous_rounds()`
+* Fixed bug in MTurk payment
+* Made time limit always display
+* Cleaned up MTurk settings
+* Several other MTurk fixes
 
 
 #### 2015-06-11: New version available
