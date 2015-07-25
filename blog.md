@@ -9,7 +9,7 @@ permalink: /blog/
 We have released a new version of otree-core. It fixes an error many users reported:
 
 ```
-django.template.base.TemplateEncodingError: Templates can only be constructed from unicode or UTF-8 strings.
+TemplateEncodingError: Templates can only be constructed from unicode or UTF-8 strings.
 ```
 
 To upgrade, open the launcher and click "Version select" and select version 0.3.19 or higher.
