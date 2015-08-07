@@ -4,15 +4,19 @@ title: Blog
 permalink: /blog/
 ---
 
-#### 2015-07-25: New version available
+#### 2015-08-07: New version available
 
-We have released a new version of otree-core. It fixes an error many users reported, especially on Mac OSX:
+We have released a new version of otree-core. It contains the following changes:
 
-```
-TemplateEncodingError: Templates can only be constructed from unicode or UTF-8 strings.
-```
+* Players are now grouped sequentially instead of randomly. For example, if you have `players_per_group=2`, then oTree will group players 1 and 2, then 3 and 4, etc.
+* You should now put CSS and JavaScript in one of the following template blocks: `styles`, `app_styles`, `global_styles`; and `scripts`, `app_scripts`, `global_scripts`. See the [docs](http://otree.readthedocs.org/en/latest/templates.html#javascript-and-css). Putting jQuery code in a template's `content` block is now deprecated.
+* Added the settings `REAL_WORLD_CURRENCY_DECIMAL_PLACES`, `POINTS_DECIMAL_PLACES`, and `POINTS_CUSTOM_NAME`. See the [docs](http://otree.readthedocs.org/en/latest/money.html#points-i-e-experimental-currency).
+* Gave each page an attribute `timeout_happened` that tells whether a timeout took place. See the [docs](http://otree.readthedocs.org/en/latest/views.html#timeout-happened).
+* We now recommend using the `otree` command rather than `python otree`, e.g. `otree resetdb`, `otree startapp`, `otree runserver`.
+* Fixed several bugs related to stability and performance.
 
-To upgrade, open the launcher and click "Version select" and select version 0.3.19 or higher.
+
+To upgrade, open the launcher and click "Version select" and select version 0.3.31 or higher.
 (Only works on launcher version 0.7.5 and above.)
 
 Otherwise, modify the `otree-core` version number in `requirements_base.txt` (the
@@ -22,6 +26,15 @@ then run:
 
 ```
 pip install -r requirements_base.txt
+```
+
+
+#### 2015-07-25: New version available
+
+We have released a new version of otree-core. It fixes an error many users reported, especially on Mac OSX:
+
+```
+TemplateEncodingError: Templates can only be constructed from unicode or UTF-8 strings.
 ```
 
 Thanks to the users who reported the above issue.
