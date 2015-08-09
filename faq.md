@@ -39,3 +39,7 @@ and to give us time to investigate any bugs you discover.
 (If you encounter a bug in oTree, please email chris@otree.org.)
 
 For best results, contact us so that we are aware of your plans and can give you guidance.
+
+Also, make sure to upgrade otree-core frequently, to get our latest bugfixes.
+In the launcher, click "Version select" and choose the most recent version.
+We recommend doing this on a weekly basis.
