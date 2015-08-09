@@ -33,9 +33,8 @@ pip install -r requirements_base.txt
 
 We have released a new version of otree-core. It fixes an error many users reported, especially on Mac OSX:
 
-```
-TemplateEncodingError: Templates can only be constructed from unicode or UTF-8 strings.
-```
+"TemplateEncodingError: Templates can only be constructed from unicode or UTF-8 strings."
+
 
 Thanks to the users who reported the above issue.
 
