@@ -18,7 +18,8 @@ Yes, it is easy to modify one of our 20+ existing games or create your own.
 
 #### Can I hire someone to build my oTree app for me?
 
-Yes. Send an email to chris@otree.org and I can put you in touch with some freelance developers who have experience with oTree programming.
+Yes. Send an email to chris@otree.org and I can put you in touch with
+a freelance developer who has experience with oTree programming and charges around $20 an hour.
 
 #### Can I use oTree with AMT (Amazon Mechanical Turk)?
 
@@ -27,7 +28,7 @@ Yes, oTree has integration with AMT
 
 #### What languages does oTree support?
 
-Apps can be programmed in English, German, Spanish, French, and Russian.
+Apps can be programmed in English, German, Spanish, French, Italian, and Russian.
 For more info or to contribute an additional language, see the [docs]({{ site.url_localization }}).
 
 #### How stable is oTree?
