@@ -6,7 +6,8 @@ permalink: /blog/
 
 #### 2015-09-24: New version available
 
-We have released a new version of otree-core. It contains various bugfixes, as well as the following changes:
+We have released a new version of otree-core. It is mostly a bugfix release, but has a few new features.
+Here are some notable changes:
 
 * More informative error message when there is a `TemplateSyntaxError`
 * Fixed an error some users had when upgrading otree-core: `ImportError: no module named related`.
