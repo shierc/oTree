@@ -34,13 +34,8 @@ For more info or to contribute an additional language, see the [docs]({{ site.ur
 
 #### How stable is oTree?
 
-oTree is in beta. Some parts of oTree are still under development and may have bugs.
-Therefore, if you are launching a real experiment,
-you should start developing and testing well in advance, to prevent last-minute surprises,
-and to give us time to investigate any bugs you discover.
-(If you encounter a bug in oTree, please email chris@otree.org.)
-
-For best results, contact us so that we are aware of your plans and can give you guidance.
+oTree is fairly stable, but some parts of oTree are still under development and may have bugs.
+If you encounter a bug in oTree, please email chris@otree.org.
 
 Also, make sure to upgrade otree-core frequently, to get our latest bugfixes.
 In the launcher, click "Version select" and choose the most recent version.
