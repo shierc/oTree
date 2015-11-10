@@ -1,0 +1,171 @@
+$ otree startapp my_trust
+class Constants:
+    name_in_url = 'my_trust'
+    players_per_group = 2
+    num_rounds = 1
+
+    endowment = c(10)
+    multiplication_factor = 3
+    class Player(BasePlayer):
+
+    # <built-in>
+    ...
+    # </built-in>
+
+    sent_amount = models.CurrencyField()
+    sent_back_amount = models.CurrencyField()
+    class Group(BaseGroup):
+
+    # <built-in>
+    ...
+    # </built-in>
+
+    sent_amount = models.CurrencyField()
+    sent_back_amount = models.CurrencyField()
+    sent_amount = models.CurrencyField(
+    choices=currency_range(0, Constants.endowment, c(1)),
+)
+def set_payoffs(self):
+    p1 = self.get_player_by_id(1)
+    p2 = self.get_player_by_id(2)
+    p1.payoff = Constants.endowment - self.sent_amount + self.sent_back_amount
+    p2.payoff = self.sent_amount * Constants.multiplication_factor - self.sent_back_amount
+    {% extends "global/Instructions.html" %}
+
+{% block instructions %}
+<p>
+    This is a trust game with 2 players.
+</p>
+<p>
+    To start, participant A receives {{ Constants.endowment }};
+    participant B receives nothing.
+    Participant A can send some or all of his {{ Constants.endowment }}
+    to participant B. Before B receives these points they will be tripled.
+    Once B receives the tripled points he can decide to send some or all
+    of his points to A.
+</p>
+{% endblock %}
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Trust Game: Your Choice
+{% endblock %}
+
+{% block content %}
+
+    {% include 'my_trust/Instructions.html' %}
+
+    <p>
+    You are Participant A. Now you have {{Constants.endowment}}.
+    </p>
+
+    {% formfield group.sent_amount with label="How much do you want to send to participant B?" %}
+
+    {% next_button %}
+
+{% endblock %}
+class Send(Page):
+
+    form_model = models.Group
+    form_fields = ['sent_amount']
+
+    def is_displayed(self):
+        return self.player.id_in_group == 1
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Trust Game: Your Choice
+{% endblock %}
+
+{% block content %}
+
+    {% include 'my_trust/Instructions.html' %}
+
+    <p>
+        You are Participant B. Participant A sent you {{group.sent_amount}}
+        and you received {{tripled_amount}}.
+    </p>
+
+    {% formfield group.sent_back_amount with label="How much do you want to send back?" %}
+
+    {% next_button %}
+
+{% endblock %}
+class SendBack(Page):
+
+    form_model = models.Group
+    form_fields = ['sent_back_amount']
+
+    def is_displayed(self):
+        return self.player.id_in_group == 2
+
+    def vars_for_template(self):
+        return {
+            'tripled_amount': self.group.sent_amount * Constants.multiplication_factor
+        }
+
+    def sent_back_amount_choices(self):
+        return currency_range(
+            c(0),
+            self.group.sent_amount * Constants.multiplication_factor,
+            c(1)
+        )
+        {% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+
+{% if player.id_in_group == 1 %}
+    <p>
+        You sent Participant B {{ group.sent_amount }}.
+        Participant B returned {{group.sent_back_amount}}.
+    </p>
+{% else %}
+    <p>
+        Participant A sent you {{ group.sent_amount }}.
+        You returned {{group.sent_back_amount}}.
+    </p>
+
+{% endif %}
+
+    <p>
+    Therefore, your total payoff is {{player.payoff}}.
+    </p>
+
+    {% include 'my_trust/Instructions.html' %}
+
+{% endblock %}
+class Results(Page):
+
+    def vars_for_template(self):
+        return {
+            'tripled_amount': self.group.sent_amount * Constants.multiplication_factor
+        }
+        class WaitForP1(WaitPage):
+    pass
+
+class ResultsWaitPage(WaitPage):
+
+    def after_all_players_arrive(self):
+        self.group.set_payoffs()
+        page_sequence = [
+    Send,
+    WaitForP1,
+    SendBack,
+    ResultsWaitPage,
+    Results,
+]
+{
+    'name': 'my_trust',
+    'display_name': "My Trust Game (simple version from tutorial)",
+    'num_demo_participants': 2,
+    'app_sequence': ['my_trust'],
+},
+$ otree resetdb
+$ otree runserver
